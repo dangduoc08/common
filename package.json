@@ -1,6 +1,6 @@
 {
   "name": "common",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
@@ -11,8 +11,8 @@
   },
   "engines": {
     "node": ">=18",
-    "npm": ">=6",
-    "yarn": ">=1"
+    "npm": ">=9",
+    "yarn": ">=1.22"
   },
   "scripts": {
     "postinstall": "npx husky install",
