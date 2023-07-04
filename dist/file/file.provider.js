@@ -23,7 +23,7 @@ let FileProvider = exports.FileProvider = class FileProvider {
     async writeJson(dir, filename, data) {
         dir = (0, path_1.join)(process.cwd(), dir);
         filename = filename.replace((0, path_1.extname)(filename), '') + '.json';
-        await (0, promises_1.writeFile)(dir + '/' + filename, JSON.stringify(data));
+        await (0, promises_1.writeFile)(dir + '/' + filename, JSON.stringify(data, null, 2), 'utf-8');
     }
     async readJson(dir, filename) {
         dir = (0, path_1.join)(process.cwd(), dir);

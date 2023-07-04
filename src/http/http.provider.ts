@@ -1,11 +1,11 @@
 import { extname, join } from 'path';
 import { Injectable } from '@nestjs/common';
 import sharp from 'sharp';
-import { HttpService } from './services';
+import { HTTPService } from './services';
 
 @Injectable()
-export class HttpProvider {
-  constructor(private readonly httpService: HttpService) {}
+export class HTTPProvider {
+  constructor(private readonly httpService: HTTPService) {}
 
   public async saveImageAsWebp(
     url: string,

@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpProvider = void 0;
+exports.HTTPProvider = void 0;
 const tslib_1 = require("tslib");
 const path_1 = require("path");
 const common_1 = require("@nestjs/common");
 const sharp_1 = tslib_1.__importDefault(require("sharp"));
 const services_1 = require("./services");
-let HttpProvider = exports.HttpProvider = class HttpProvider {
+let HTTPProvider = exports.HTTPProvider = class HTTPProvider {
     httpService;
     constructor(httpService) {
         this.httpService = httpService;
@@ -20,7 +20,7 @@ let HttpProvider = exports.HttpProvider = class HttpProvider {
         return webpPath;
     }
 };
-exports.HttpProvider = HttpProvider = tslib_1.__decorate([
+exports.HTTPProvider = HTTPProvider = tslib_1.__decorate([
     (0, common_1.Injectable)(),
-    tslib_1.__metadata("design:paramtypes", [services_1.HttpService])
-], HttpProvider);
+    tslib_1.__metadata("design:paramtypes", [services_1.HTTPService])
+], HTTPProvider);

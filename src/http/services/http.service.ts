@@ -3,7 +3,7 @@ import { HttpService as AxiosService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
 
 @Injectable()
-export class HttpService {
+export class HTTPService {
   constructor(private readonly axiosService: AxiosService) {}
 
   public async download(url: string): Promise<AxiosResponse<Buffer>> {

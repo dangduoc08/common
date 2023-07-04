@@ -27,7 +27,11 @@ export class FileProvider {
     dir = join(process.cwd(), dir);
     filename = filename.replace(extname(filename), '') + '.json';
 
-    await writeFile(dir + '/' + filename, JSON.stringify(data));
+    await writeFile(
+      dir + '/' + filename,
+      JSON.stringify(data, null, 2),
+      'utf-8'
+    );
   }
 
   public async readJson<T>(dir: string, filename: string): Promise<T> {
