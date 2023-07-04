@@ -1,0 +1,85 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warn"
+    ],
+    "no-console": [ // warn: when use console.*
+      1
+    ],
+    "arrow-body-style": [ // warn: when write arrow function having scopes without function body
+      1,
+      "as-needed"
+    ],
+    "comma-spacing": [ // warn: when code like: const foo = 1 ,bar = 2
+      1,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "camelcase": [ // warn: except object properties, all variable names should be in camelCase
+      1,
+      {
+        "properties": "never"
+      }
+    ],
+    "no-unneeded-ternary": [ // error: when code like: const isYes = answer === 1 ? true : false
+      2
+    ],
+    "no-dupe-keys": [ // error: when have duplicated keys in object
+      2
+    ],
+    "eqeqeq": [ // error: when use == instead ===
+      2,
+      "always"
+    ],
+    "@typescript-eslint/no-unused-vars": [ // warn: no unuse variables. Override, due to it's config as warn
+      1
+    ],
+    "@typescript-eslint/no-var-requires": [ // error: no use CommonJS module
+      2
+    ],
+    "@typescript-eslint/no-extra-semi": [ // turn off by default, using prettier
+      0
+    ],
+    "@typescript-eslint/no-inferrable-types": [ // turn off by default, can assign type to simple data types
+      // like string, boolean, number
+      0
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": [ // error: function must define return types
+          2
+        ]
+      }
+    }
+  ]
+}
