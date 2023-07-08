@@ -46,7 +46,10 @@ export class FileProvider {
     }
   }
 
-  public async getFiles(dir: string, fileTypes: string[]): Promise<string[]> {
+  public async getFiles(
+    dir: string,
+    ...fileTypes: string[]
+  ): Promise<string[]> {
     dir = join(process.cwd(), dir);
     const listFiles = await readdir(dir);
     fileTypes = fileTypes.map((extname) =>

@@ -9,6 +9,8 @@ let HelperService = exports.HelperService = class HelperService {
         switch (utilType) {
             case 'query':
                 return utils_1.Query.getInstance();
+            case 'object':
+                return utils_1.ObjectData.getInstance();
             default:
                 return undefined;
         }

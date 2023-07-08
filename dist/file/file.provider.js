@@ -36,7 +36,7 @@ let FileProvider = exports.FileProvider = class FileProvider {
             return null;
         }
     }
-    async getFiles(dir, fileTypes) {
+    async getFiles(dir, ...fileTypes) {
         dir = (0, path_1.join)(process.cwd(), dir);
         const listFiles = await (0, promises_1.readdir)(dir);
         fileTypes = fileTypes.map((extname) => extname[0] === '.' ? extname : '.' + extname);

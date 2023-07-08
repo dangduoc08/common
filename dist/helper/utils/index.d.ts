@@ -1,2 +1,3 @@
 import { Query } from './query';
-export { Query };
+import { ObjectData } from './object';
+export { Query, ObjectData };
